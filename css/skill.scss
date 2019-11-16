@@ -1,0 +1,221 @@
+// ----- カラー -----
+$base_color: #fafafa;
+$main_color: #111111;
+$skills_color: #0b6817;
+
+// ----- メディアクエリ -----
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+@mixin mq($break-point) {
+  @media (max-width: $break-point) {
+    @content;
+  }
+}
+
+/* -------------------- */
+/* ----- skill ----- */
+/* -------------------- */
+.skill {
+  position: relative;
+  margin-bottom: 100px;
+  @include mq($sm) {
+    margin-bottom: 50px;
+  }
+  &:after {
+    position: absolute;
+    width: 95%;
+    height: 3px;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: $main_color;
+    content: "";
+    z-index: 10;
+    @include mq($sm) {
+      margin-bottom: -50px;
+    }
+  }
+
+  &-ttl {
+    margin-left: 30px;
+    @include mq($lg) {
+      margin-left: 0;
+    }
+    h2 {
+      margin: 0;
+      color: $skills_color;
+      text-decoration: none;
+      font-size: 200px;
+      text-shadow: 10px 10px 0 #000;
+      @include mq($lg) {
+        font-size: 150px;
+      }
+      @include mq($sm) {
+        font-size: 100px;
+      }
+      span {
+        position: relative;
+        width: 400px;
+        top: -100px;
+        left: 0;
+        font-size: 80px;
+        text-shadow: 3px 3px 0 #000;
+        @include mq($lg) {
+          top: -72px;
+          font-size: 60px;
+        }
+        @include mq($sm) {
+          top: -50px;
+          font-size: 40px;
+        }
+        &:after {
+          position: absolute;
+          width: 900px;
+          height: 3.5px;
+          bottom: 0;
+          left: 0;
+          background: $main_color;
+          content: "";
+          z-index: 10;
+          @include mq($xl) {
+            width: 900px;
+          }
+          @include mq($lg) {
+            width: 900px;
+          }
+          @include mq($md) {
+            width: 900px;
+          }
+          @include mq($sm) {
+            width: 900px;
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    // display: flex;
+    // justify-content: center;
+    // flex-wrap: wrap;
+    .sentence-outer {
+      width: 60%;
+      padding: 30px;
+      background: #fff;
+      border: 2px solid black;
+      box-shadow: 50px 30px 0 black;
+      font-size: 30px;
+      &:nth-of-type(odd) {
+        margin: 0 auto 50px 100px;
+      }
+      &:nth-of-type(even) {
+        margin: 0 100px 50px auto;
+      }
+      @include mq($lg) {
+        // width: 60%;
+        // margin: 0 auto 0 20%;
+        // box-shadow: 30px 15px 0 black;
+        // font-size: 28px;
+      }
+      @include mq($md) {
+        // width: 75%;
+        // margin: 0 auto 50px;
+      }
+      @include mq($sm) {
+        // box-shadow: 15px 10px 0 black;
+      }
+    }
+    .sentence-ttl {
+      position: relative;
+      font-size: 40px;
+      &:after {
+        position: absolute;
+        width: 110%;
+        height: 3px;
+        bottom: 0;
+        left: -100px;
+        margin: auto;
+        background: $main_color;
+        content: "";
+        @include mq($md) {
+          width: 75%;
+          left: -40px;
+        }
+        @include mq($sm) {
+          width: 95%;
+          left: -30px;
+        }
+      }
+    }
+    .sentence-txt {
+      font-size: 30px;
+      @include mq($sm) {
+        font-size: 20px;
+      }
+    }
+  }
+  .imgs-outer {
+    &:nth-of-type(1) {
+      position: relative;
+      top: -100px;
+      left: 30px;
+      width: 80%;
+      @include mq($lg) {
+        top: -60px;
+      }
+      @include mq($md) {
+        position: static;
+        width: 85%;
+        margin: 0 auto 50px;
+      }
+      .imgs-img {
+        width: 100%;
+        height: 350px;
+        box-shadow: 50px 30px 0 black;
+        background-image: url(../imgs/meeting1.jpg);
+        background-repeat: no-repeat;
+        background-position: 70% center;
+        background-size: cover;
+        @include mq($lg) {
+          height: 250px;
+          box-shadow: 30px 15px 0 black;
+        }
+        @include mq($sm) {
+          height: 150px;
+          box-shadow: 15px 10px 0 black;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      width: 80%;
+      @include mq($xl) {
+        margin-left: 10px;
+      }
+      @include mq($md) {
+        width: 85%;
+        margin: 0 auto;
+      }
+      .imgs-img {
+        width: 100%;
+        height: 350px;
+        box-shadow: 50px 30px 0 black;
+        background-image: url(../imgs/meeting2.jpg);
+        background-repeat: no-repeat;
+        background-position: 70% center;
+        background-size: cover;
+        @include mq($lg) {
+          height: 250px;
+          box-shadow: 30px 15px 0 black;
+        }
+        @include mq($sm) {
+          height: 150px;
+          box-shadow: 15px 10px 0 black;
+        }
+      }
+    }
+  }
+}

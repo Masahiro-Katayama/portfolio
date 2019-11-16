@@ -1,0 +1,212 @@
+// ----- カラー -----
+$base_color: #fafafa;
+$main_color: #111111;
+$works_color: #e2d01a;
+
+// ----- メディアクエリ -----
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+@mixin mq($break-point) {
+  @media (max-width: $break-point) {
+    @content;
+  }
+}
+
+/* -------------------- */
+/* ----- works ----- */
+/* -------------------- */
+.works {
+  position: relative;
+  margin-bottom: 100px;
+  @include mq($sm) {
+    margin-bottom: 50px;
+  }
+  &:after {
+    position: absolute;
+    width: 95%;
+    height: 3px;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: $main_color;
+    content: "";
+    z-index: 10;
+    @include mq($sm) {
+      bottom: -50px;
+    }
+  }
+
+  &-ttl {
+    margin-left: 30px;
+    @include mq($lg) {
+      margin-left: 0;
+    }
+    h2 {
+      margin: 0;
+      color: $works_color;
+      text-decoration: none;
+      font-size: 200px;
+      text-shadow: 10px 10px 0 #000;
+      @include mq($lg) {
+        font-size: 150px;
+      }
+      @include mq($sm) {
+        font-size: 100px;
+      }
+      span {
+        position: relative;
+        width: 400px;
+        top: -100px;
+        left: 0;
+        font-size: 80px;
+        text-shadow: 3px 3px 0 #000;
+        @include mq($lg) {
+          top: -73px;
+          font-size: 60px;
+        }
+        @include mq($sm) {
+          top: -50px;
+          font-size: 40px;
+        }
+        &:after {
+          position: absolute;
+          width: 900px;
+          height: 3.5px;
+          bottom: 0;
+          left: 0;
+          background: $main_color;
+          content: "";
+          z-index: 10;
+          @include mq($xl) {
+            width: 900px;
+          }
+          @include mq($lg) {
+            width: 900px;
+          }
+          @include mq($md) {
+            width: 900px;
+          }
+          @include mq($sm) {
+            width: 900px;
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    .work-outer {
+      margin: 0 auto 80px;
+      padding: 10px;
+      width: 80%;
+      border: 2px solid black;
+      box-shadow: 50px 30px 0 black;
+      font-size: 35px;
+      @include mq($xl) {
+        width: 60%;
+        font-size: 30px;
+      }
+      @include mq($lg) {
+        box-shadow: 30px 15px 0 black;
+      }
+      @include mq($md) {
+        width: 75%;
+        font-size: 28px;
+      }
+      @include mq($sm) {
+        box-shadow: 15px 10px 0 black;
+      }
+      .work-ttl {
+        position: relative;
+        margin: 20px 0 30px;
+        font-size: 40px;
+        &:after {
+          position: absolute;
+          width: 500px;
+          height: 3px;
+          bottom: 0;
+          left: -100px;
+          margin: auto;
+          background: $main_color;
+          content: "";
+          z-index: -10;
+          @include mq($md) {
+            width: 400px;
+            left: -40px;
+          }
+          @include mq($sm) {
+            width: 95%;
+            left: -30px;
+          }
+        }
+      }
+      .top {
+        display: flex;
+        img {
+          width: 300px;
+          margin: 5px;
+          border: 1px solid #000;
+        }
+        &-txt {
+          margin: 0 16px;
+          font-size: 28px;
+        }
+      }
+      .topWeb {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        p {
+          width: 30%;
+          img {
+            width: 100%;
+            border: 1px solid #000;
+          }
+        }
+      }
+      .language {
+        display: flex;
+        &-txt {
+          margin: 5px 0;
+          font-size: 28px;
+          &:nth-of-type(odd) {
+            width: 15%;
+          }
+          &:nth-of-type(even) {
+            width: 85%;
+          }
+        }
+      }
+      .environment {
+        display: flex;
+        &-txt {
+          margin: 5px 0;
+          font-size: 28px;
+          &:nth-of-type(odd) {
+            width: 15%;
+          }
+          &:nth-of-type(even) {
+            width: 85%;
+          }
+        }
+      }
+      .keyword {
+        display: flex;
+        &-txt {
+          margin: 5px 0;
+          font-size: 28px;
+          &:nth-of-type(odd) {
+            width: 25%;
+          }
+          &:nth-of-type(even) {
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+}
