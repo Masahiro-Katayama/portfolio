@@ -80,8 +80,17 @@ body {
   width: 80%;
   margin: 20px auto;
   border: 5px dotted black;
+  @include mq($md) {
+    width: 85%;
+  }
   &-txt {
     font-size: 40px;
     margin: 10px 0;
+    @include mq($lg) {
+      font-size: 20px;
+    }
+    @include mq($md) {
+      font-size: 18px;
+    }
   }
 }

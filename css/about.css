@@ -58,6 +58,7 @@
 @media (max-width: 576px) {
   .about-ttl h2 {
     font-size: 100px;
+    text-shadow: 5px 5px 0 #000;
   }
 }
 
@@ -80,13 +81,14 @@
 @media (max-width: 576px) {
   .about-ttl h2 span {
     top: -50px;
+    text-shadow: 2px 2px 0 #000;
     font-size: 40px;
   }
 }
 
 .about-ttl h2 span:after {
   position: absolute;
-  width: 900px;
+  width: 69vw;
   height: 3.5px;
   bottom: 0;
   left: 0;
@@ -95,27 +97,21 @@
   z-index: 10;
 }
 
-@media (max-width: 1200px) {
-  .about-ttl h2 span:after {
-    width: 900px;
-  }
-}
-
 @media (max-width: 992px) {
   .about-ttl h2 span:after {
-    width: 900px;
+    width: 74vw;
   }
 }
 
 @media (max-width: 768px) {
   .about-ttl h2 span:after {
-    width: 900px;
+    width: 66vw;
   }
 }
 
 @media (max-width: 576px) {
   .about-ttl h2 span:after {
-    width: 900px;
+    width: 61vw;
   }
 }
 
@@ -130,10 +126,10 @@
 }
 
 .about .profile-outer .profile-list {
-  width: 85%;
+  width: 78%;
   margin: 0 auto;
   padding: 30px 0;
-  font-size: 30px;
+  font-size: 28px;
   border: 2px solid black;
   -webkit-box-shadow: 50px 30px 0 black;
           box-shadow: 50px 30px 0 black;
@@ -141,37 +137,44 @@
 
 @media (max-width: 1200px) {
   .about .profile-outer .profile-list {
-    width: 85%;
-    font-size: 28px;
+    width: 80%;
+    -webkit-box-shadow: 30px 15px 0 black;
+            box-shadow: 30px 15px 0 black;
+    font-size: 25px;
   }
 }
 
 @media (max-width: 992px) {
   .about .profile-outer .profile-list {
     width: 90%;
-    font-size: 25px;
-    -webkit-box-shadow: 30px 15px 0 black;
-            box-shadow: 30px 15px 0 black;
+    font-size: 23px;
   }
 }
 
 @media (max-width: 768px) {
   .about .profile-outer .profile-list {
-    width: 85%;
-    font-size: 25px;
+    -webkit-box-shadow: 20px 10px 0 black;
+            box-shadow: 20px 10px 0 black;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 576px) {
   .about .profile-outer .profile-list {
-    -webkit-box-shadow: 15px 10px 0 black;
-            box-shadow: 15px 10px 0 black;
+    -webkit-box-shadow: 10px 5px 0 black;
+            box-shadow: 10px 5px 0 black;
   }
 }
 
 .about .profile-outer .profile-list p {
-  width: 80%;
+  width: 90%;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .about .profile-outer .profile-list p {
+    width: 90%;
+  }
 }
 
 .about .profile-outer .profile-list p:nth-of-type(1) {
@@ -182,21 +185,45 @@
   margin: 0 auto 20px 4%;
 }
 
+@media (max-width: 768px) {
+  .about .profile-outer .profile-list p:nth-of-type(2) {
+    margin: 0 auto 20px 3%;
+  }
+}
+
 .about .profile-outer .profile-list p:nth-of-type(3) {
   margin: 0 auto 20px 6%;
+}
+
+@media (max-width: 768px) {
+  .about .profile-outer .profile-list p:nth-of-type(3) {
+    margin: 0 auto 20px 4%;
+  }
 }
 
 .about .profile-outer .profile-list p:nth-of-type(4) {
   margin: 0 auto 20px 8%;
 }
 
+@media (max-width: 768px) {
+  .about .profile-outer .profile-list p:nth-of-type(4) {
+    margin: 0 auto 20px 5%;
+  }
+}
+
 .about .profile-outer .profile-list p:nth-of-type(5) {
   margin: 0 auto 20px 10%;
 }
 
+@media (max-width: 768px) {
+  .about .profile-outer .profile-list p:nth-of-type(5) {
+    margin: 0 auto 20px 6%;
+  }
+}
+
 .about .profile-outer .profile-list p:after {
   position: absolute;
-  width: 110%;
+  width: 97%;
   height: 3px;
   bottom: 0;
   left: 0;
@@ -204,21 +231,9 @@
   content: "";
 }
 
-@media (max-width: 1200px) {
-  .about .profile-outer .profile-list p:after {
-    width: 420px;
-  }
-}
-
 @media (max-width: 768px) {
   .about .profile-outer .profile-list p:after {
-    width: 400px;
-  }
-}
-
-@media (max-width: 576px) {
-  .about .profile-outer .profile-list p:after {
-    width: 190px;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=about.css.map */
